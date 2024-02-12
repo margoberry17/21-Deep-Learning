@@ -90,9 +90,13 @@ My goal was to optimize my model to achieve a target predictive accuracy higher 
 
             
 Some methods I used to optimize my model:
+
         - Created more bins for rare occurrences in columns.
+        
         - Increased/Decreased the number of values for each bin.
+        
         - Added more neurons to a hidden layer.
+        
         - Added more hidden layers.
 
 ## Step 4: Write a Report on the Neural Network Model
