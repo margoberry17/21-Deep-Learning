@@ -6,13 +6,16 @@
 
 - Read in the charity_data.csv to a Pandas DataFrame.
 
-    TARGET for my model: 'IS_SUCCESSFUL' column from application_df
-    FEATURES for my model: Every other column from the application_df (dropped the 'IS_SUCCESSFUL' column to create the features data frame)
+      TARGET for my model: 'IS_SUCCESSFUL' column from application_df
+
+      FEATURES for my model: Every other column from the application_df (dropped the 'IS_SUCCESSFUL' column to create the features data frame)
 
 - The 'EIN' and 'NAME' columns were dropped since they were neither targets nor features for my model.
 
 - I used the number of data points for each unique value to pick a cutoff point to bin "rare" categorical variables together in a new value, Other, and then checked if the binning was successful.
+
       For the 'APPLICATION_TYPE' column, I chose a cut-off value of 156.
+
       For the 'CLASSIFICATION' column, I chose a cut-off value of 1883.
 
 - I used pd.get_dummies() to encode categorical variables.
