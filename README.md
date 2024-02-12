@@ -60,7 +60,7 @@ My goal was to optimize my model to achieve a target predictive accuracy higher 
             - hidden_nodes_layer2 = 10
       - Epoch = 100
 
-      ![03 Step2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/472fa72e-826b-4511-9e14-059e49019f06)
+![03 Step2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/472fa72e-826b-4511-9e14-059e49019f06)
 
 
 # 2nd Attempt
@@ -73,7 +73,7 @@ My goal was to optimize my model to achieve a target predictive accuracy higher 
             - hidden_nodes_layer3 = 10
       - Epoch = 100
 
-      ![03 Step2 Optimization1](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/9d36d7e6-0846-45ff-a0a9-fbf233b589c2)
+![03 Step2 Optimization1](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/9d36d7e6-0846-45ff-a0a9-fbf233b589c2)
 
 
 # 3rd Attempt
@@ -86,7 +86,7 @@ My goal was to optimize my model to achieve a target predictive accuracy higher 
             - hidden_nodes_layer3 = 5
       - Epoch = 75
 
-      ![03 Step2 Optimization2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/04045b44-1d89-4ba8-908e-0ac61203431b)
+![03 Step2 Optimization2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/04045b44-1d89-4ba8-908e-0ac61203431b)
 
             
 Some methods I used to optimize my model:
