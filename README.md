@@ -2,50 +2,47 @@
 
 ## Step 1: Preprocess the Data
 
-- Preprocess the dataset using Pandas and scikit-learn’s StandardScaler()
+- Preprocessed the dataset using Pandas and scikit-learn’s StandardScaler()
 
-    Read in the charity_data.csv to a Pandas DataFrame, and be sure to identify the following in your dataset:
+- Read in the charity_data.csv to a Pandas DataFrame.
 
-    What variable(s) are the target(s) for your model?
-    What variable(s) are the feature(s) for your model?
+    TARGET for my model: 'IS_SUCCESSFUL' column from application_df
+    FEATURES for my model: Every other column from the application_df (dropped the 'IS_SUCCESSFUL' column to create the features data frame)
 
-    Drop the EIN and NAME columns.
+- The 'EIN' and 'NAME' columns were dropped since they were neither targets nor features for my model.
 
-    Determine the number of unique values for each column.
+- I used the number of data points for each unique value to pick a cutoff point to bin "rare" categorical variables together in a new value, Other, and then checked if the binning was successful.
+      For the 'APPLICATION_TYPE' column, I chose a cut-off value of 156.
+      For the 'CLASSIFICATION' column, I chose a cut-off value of 1883.
 
-    For columns that have more than 10 unique values, determine the number of data points for each unique value.
+- I used pd.get_dummies() to encode categorical variables.
 
-    Use the number of data points for each unique value to pick a cutoff point to bin "rare" categorical variables together in a new value, Other, and then check if the binning was successful.
+- I split the preprocessed data into a features array, X, and a target array, y. I used these arrays and the train_test_split function to split the data into training and testing datasets.
 
-    Use pd.get_dummies() to encode categorical variables.
-
-    Split the preprocessed data into a features array, X, and a target array, y. Use these arrays and the train_test_split function to split the data into training and testing datasets.
-
-    Scale the training and testing features datasets by creating a StandardScaler instance, fitting it to the training data, then using the transform function.
+- I scaled the training and testing features datasets by creating a StandardScaler instance, fitting it to the training data, and then using the transform function.
 
 ## Step 2: Compile, Train, and Evaluate the Model
 
-Using your knowledge of TensorFlow, you’ll design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup-funded organization will be successful based on the features in the dataset. You’ll need to think about how many inputs there are before determining the number of neurons and layers in your model. Once you’ve completed that step, you’ll compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
+Using my knowledge of TensorFlow, I designed a neural network, and deep learning model, to create a binary classification model that predicted if the Alphabet Soup-funded organization would be successful based on the features in the dataset. I compiled, trained, and evaluated my binary classification model to calculate the model’s loss and accuracy.
 
-    Continue using the file in Google Colab in which you performed the preprocessing steps from Step 1.
+- I created a neural network model by assigning the number of input features and nodes for each layer using TensorFlow and Keras.
+    input features = length of the Scaled Training Data
+    hidden_nodes_layer1 = 25
+    hidden_nodes_layer2 = 10
 
-    Create a neural network model by assigning the number of input features and nodes for each layer using TensorFlow and Keras.
+- The structure of the model:
+  
+  ![01 Step2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/ca01f51c-c586-43b6-8636-3b9f56cfd6d5)
 
-    Create the first hidden layer and choose an appropriate activation function.
+- I compiled and trained the model.
 
-    If necessary, add a second hidden layer with an appropriate activation function.
+  ![02 Step2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/0ecc4da1-2502-443b-8003-045f216cd5d8)
 
-    Create an output layer with an appropriate activation function.
+- I evaluated the model using the test data to determine the loss and accuracy.
 
-    Check the structure of the model.
+  ![03 Step2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/aa9ccf82-eb67-4019-a38e-cda426f00733)
 
-    Compile and train the model.
-
-    Create a callback that saves the model's weights every five epochs.
-
-    Evaluate the model using the test data to determine the loss and accuracy.
-
-    Save and export your results to an HDF5 file. Name the file AlphabetSoupCharity.h5.
+- I saved and exported your results to an HDF5 file and named the file AlphabetSoupCharity.h5.
 
 ## Step 3: Optimize the Model
 
@@ -76,32 +73,22 @@ Note: If you make at least three attempts at optimizing your model, you will not
 
 ## Step 4: Write a Report on the Neural Network Model
 
-For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for Alphabet Soup.
+# Overview of the analysis: 
+    Explain the purpose of this analysis.
 
-The report should contain the following:
+# Results: 
+    Using bulleted lists and images to support your answers, address the following questions:
 
-    Overview of the analysis: Explain the purpose of this analysis.
+# Data Preprocessing
+    What variable(s) are the target(s) for your model?
+    What variable(s) are the features for your model?
+    What variable(s) should be removed from the input data because they are neither targets nor features?
 
-    Results: Using bulleted lists and images to support your answers, address the following questions:
+# Compiling, Training, and Evaluating the Model
+    How many neurons, layers, and activation functions did you select for your neural network model, and why?
+    Were you able to achieve the target model performance?
+    What steps did you take in your attempts to increase model performance?
 
-    Data Preprocessing
-        What variable(s) are the target(s) for your model?
-        What variable(s) are the features for your model?
-        What variable(s) should be removed from the input data because they are neither targets nor features?
+# Summary: 
+    Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
 
-    Compiling, Training, and Evaluating the Model
-        How many neurons, layers, and activation functions did you select for your neural network model, and why?
-        Were you able to achieve the target model performance?
-        What steps did you take in your attempts to increase model performance?
-
-    Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
-
-## Step 5: Copy Files Into Your Repository
-
-Now that you're finished with your analysis in Google Colab, you need to get your files into your repository for final submission.
-
-    Download your Colab notebooks to your computer.
-
-    Move them into your Deep Learning Challenge directory in your local repository.
-
-    Push the added files to GitHub.
