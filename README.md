@@ -51,39 +51,39 @@ Using my knowledge of TensorFlow, I designed a neural network, and deep learning
 
 My goal was to optimize my model to achieve a target predictive accuracy higher than 75%.
 
-# 1st Attempt
+### 1st Attempt
 
       - For the 'APPLICATION_TYPE' column, I chose a cut-off value of 156.
       - For the 'CLASSIFICATION' column, I chose a cut-off value of 1883.
       - 2 Layers:
-            - hidden_nodes_layer1 = 25
-            - hidden_nodes_layer2 = 10
+            - hidden_nodes_layer1 = 25, activation function = ‘relu’
+            - hidden_nodes_layer2 = 10, activation function = ‘relu’
       - Epoch = 100
 
 ![03 Step2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/472fa72e-826b-4511-9e14-059e49019f06)
 
 
-# 2nd Attempt
+### 2nd Attempt
       
       - For the 'APPLICATION_TYPE' column, I chose a cut-off value of 528.
       - For the 'CLASSIFICATION' column, I chose a cut-off value of 777.
       - 3 Layers:
-            - hidden_nodes_layer1 = 40
-            - hidden_nodes_layer2 = 20
-            - hidden_nodes_layer3 = 10
+            - hidden_nodes_layer1 = 40, activation function = ‘relu’
+            - hidden_nodes_layer2 = 20, activation function = ‘relu’
+            - hidden_nodes_layer3 = 10, activation function = ‘relu’
       - Epoch = 100
 
 ![03 Step2 Optimization1](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/9d36d7e6-0846-45ff-a0a9-fbf233b589c2)
 
 
-# 3rd Attempt
+### 3rd Attempt
 
       - For the 'APPLICATION_TYPE' column, I chose a cut-off value of 156.
       - For the 'CLASSIFICATION' column, I chose a cut-off value of 1883.
       - 3 Layers:
-            - hidden_nodes_layer1 = 60
-            - hidden_nodes_layer2 = 20
-            - hidden_nodes_layer3 = 5
+            - hidden_nodes_layer1 = 60, activation function = ‘relu’
+            - hidden_nodes_layer2 = 20, activation function = ‘relu’
+            - hidden_nodes_layer3 = 5, activation function = ‘relu’
       - Epoch = 75
 
 ![03 Step2 Optimization2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/04045b44-1d89-4ba8-908e-0ac61203431b)
@@ -99,24 +99,8 @@ Some methods I used to optimize my model:
         
         - Added more hidden layers.
 
-## Step 4: Write a Report on the Neural Network Model
+        - Added/reduced the number of epochs to the training regimen.
 
-# Overview of the analysis: 
-    Explain the purpose of this analysis.
+## Step 4: Summary
 
-# Results: 
-    Using bulleted lists and images to support your answers, address the following questions:
-
-# Data Preprocessing
-    What variable(s) are the target(s) for your model?
-    What variable(s) are the features for your model?
-    What variable(s) should be removed from the input data because they are neither targets nor features?
-
-# Compiling, Training, and Evaluating the Model
-    How many neurons, layers, and activation functions did you select for your neural network model, and why?
-    Were you able to achieve the target model performance?
-    What steps did you take in your attempts to increase model performance?
-
-# Summary: 
-    Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
-
+After three attempts, the model was able to reach an accuracy score of 73.8% (third attempt) in predicting whether or not applicants for funding would be successful. After I implemented multiple approaches to optimize my model I continued to get a result of ~73% for all three attempts. I would consider adding 'NAME' or 'EIN' back into the data to see if I removed too much information, potentially adding more layers to filter through the data better, or using different activation functions for the hidden layers and be able to predict and classify information with higher accuracy. 
