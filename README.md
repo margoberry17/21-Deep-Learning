@@ -49,30 +49,51 @@ Using my knowledge of TensorFlow, I designed a neural network, and deep learning
 
 ## Step 3: Optimize the Model
 
-Using your knowledge of TensorFlow, optimize your model to achieve a target predictive accuracy higher than 75%.
+My goal was to optimize my model to achieve a target predictive accuracy higher than 75%.
 
-Use any or all of the following methods to optimize your model:
+# 1st Attempt
 
-    Adjust the input data to ensure that no variables or outliers are causing confusion in the model, such as:
-        Dropping more or fewer columns.
-        Creating more bins for rare occurrences in columns.
-        Increasing or decreasing the number of values for each bin.
-        Add more neurons to a hidden layer.
-        Add more hidden layers.
-        Use different activation functions for the hidden layers.
-        Add or reduce the number of epochs to the training regimen.
+      - For the 'APPLICATION_TYPE' column, I chose a cut-off value of 156.
+      - For the 'CLASSIFICATION' column, I chose a cut-off value of 1883.
+      - 2 Layers:
+            - hidden_nodes_layer1 = 25
+            - hidden_nodes_layer2 = 10
+      - Epoch = 100
 
-Note: If you make at least three attempts at optimizing your model, you will not lose points if your model does not achieve target performance.
+      ![03 Step2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/472fa72e-826b-4511-9e14-059e49019f06)
 
-    Create a new Google Colab file and name it AlphabetSoupCharity_Optimization.ipynb.
 
-    Import your dependencies and read in the charity_data.csv to a Pandas DataFrame.
+# 2nd Attempt
+      
+      - For the 'APPLICATION_TYPE' column, I chose a cut-off value of 528.
+      - For the 'CLASSIFICATION' column, I chose a cut-off value of 777.
+      - 3 Layers:
+            - hidden_nodes_layer1 = 40
+            - hidden_nodes_layer2 = 20
+            - hidden_nodes_layer3 = 10
+      - Epoch = 100
 
-    Preprocess the dataset as you did in Step 1. Be sure to adjust for any modifications that came out of optimizing the model.
+      ![03 Step2 Optimization1](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/9d36d7e6-0846-45ff-a0a9-fbf233b589c2)
 
-    Design a neural network model, and be sure to adjust for modifications that will optimize the model to achieve higher than 75% accuracy.
 
-    Save and export your results to an HDF5 file. Name the file AlphabetSoupCharity_Optimization.h5.
+# 3rd Attempt
+
+      - For the 'APPLICATION_TYPE' column, I chose a cut-off value of 156.
+      - For the 'CLASSIFICATION' column, I chose a cut-off value of 1883.
+      - 3 Layers:
+            - hidden_nodes_layer1 = 60
+            - hidden_nodes_layer2 = 20
+            - hidden_nodes_layer3 = 5
+      - Epoch = 75
+
+      ![03 Step2 Optimization2](https://github.com/margoberry17/21-Deep-Learning/assets/136475202/04045b44-1d89-4ba8-908e-0ac61203431b)
+
+            
+Some methods I used to optimize my model:
+        - Created more bins for rare occurrences in columns.
+        - Increased/Decreased the number of values for each bin.
+        - Added more neurons to a hidden layer.
+        - Added more hidden layers.
 
 ## Step 4: Write a Report on the Neural Network Model
 
